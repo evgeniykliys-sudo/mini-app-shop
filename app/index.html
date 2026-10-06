@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Кофейня — меню</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="/static/style.css?v={{BUILD}}">
+</head>
+<body>
+  <header>
+    <h1>☕ Кофейня «Демо»</h1>
+    <p class="sub">Закажите заранее — заберёте без очереди</p>
+  </header>
+
+  <div id="notice" class="notice hidden"></div>
+
+  <section id="menu-view">
+    <nav id="tabs"></nav>
+    <div id="items"></div>
+  </section>
+
+  <section id="checkout-view" class="hidden">
+    <h2>Ваш заказ</h2>
+    <div id="summary"></div>
+    <label>Когда заберёте
+      <select id="pickup"></select>
+    </label>
+    <label>Комментарий
+      <textarea id="comment" maxlength="300" placeholder="Например: без сахара"></textarea>
+    </label>
+    <p class="hint">Демо: оплата символическая — 1 ⭐, после оплаты её можно вернуть кнопкой в чате.</p>
+  </section>
+
+  <section id="done-view" class="hidden">
+    <div class="done">✅</div>
+    <h2>Заказ оплачен</h2>
+    <p>Подтверждение — в чате с ботом.</p>
+  </section>
+
+  <!-- В обычном браузере (без Telegram) кнопок Telegram нет — своя кнопка как запасной вариант -->
+  <button id="fallback-button" class="hidden"></button>
+
+  <script src="/static/app.js?v={{BUILD}}"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+*.pyc
+.env
+*.log
+orders.db
+.env.tmp
+# бинарник cloudflared (40 МБ) — скачивается, не хранится в репозитории
+tools/
